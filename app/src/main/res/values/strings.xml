@@ -3,4 +3,6 @@
     <string name="edit_message">Enter a message</string>
     <string name="start_game">Start Game</string>
     <string name="about_game">About</string>
+    <string name="guess_the_year">Year</string>
+    <string name="guess_button">Guess!</string>
 </resources>
