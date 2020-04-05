@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".QuestionActivity">
 
@@ -10,9 +10,12 @@
         android:id="@+id/question"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="98dp"
+        android:layout_marginEnd="32dp"
         android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,21 +23,30 @@
         android:id="@+id/guessTheYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="70dp"
+        android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="@string/guess_the_year"
         android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-        tools:layout_editor_absoluteX="99dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="guessYear"
         android:text="@string/guess_button"
-        app:layout_constraintTop_toBottomOf="@+id/guessTheYear"
-        tools:layout_editor_absoluteX="161dp" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessTheYear" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -49,5 +61,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="getHelp"
+        android:text="@string/help_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
